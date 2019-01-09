@@ -1,0 +1,44 @@
+# Copyright [2018] [Phil Chen]
+
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+
+#    http://www.apache.org/licenses/LICENSE-2.0
+
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+AWSTemplateFormatVersion: 2010-09-09
+Description: 'Encrypted DynamoDB Template'
+
+Resources:
+
+  ClientInvoiceTable:
+    Type: 'AWS::DynamoDB::Table'
+    Properties:
+      SSESpecification:
+        SSEEnabled: 'true'
+      AttributeDefinitions:
+        - AttributeName: 'client_email'
+          AttributeType: 'S'
+        - AttributeName: 'invoice_number'
+          AttributeType: 'S'
+      KeySchema:
+        - AttributeName: 'client_email'
+          KeyType: 'HASH'
+        - AttributeName: 'invoice_number'
+          KeyType: 'RANGE'
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
+      TableName: Client_Invoice
+
+Outputs:
+    ClientInvoiceTable:
+        Description: 'Client Invoice Table'
+        Value:
+          Ref: 'ClientInvoiceTable'
