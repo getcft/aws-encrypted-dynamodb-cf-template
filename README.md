@@ -8,7 +8,7 @@ The AWS CloudFormation template creates a AWS DynamoDB encrypted example table t
 
 Amazon DynamoDB is a key-value and document database that delivers single-digit millisecond performance at any scale. It's a fully managed, multi-region, multi-master database with built-in security, backup and restore, and in-memory caching for internet-scale applications.
 
-_***note AWS NAT Gateway and Elastic IP will incur costs**_
+_***note AWS DynamoDB will incur costs**_
 
 * [DynamoDB pricing](https://aws.amazon.com/dynamodb/pricing/) resource used in example: 1 Provisioned Write and 1 Provisioned Read Capacity Unit
 
