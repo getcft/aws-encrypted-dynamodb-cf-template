@@ -26,7 +26,7 @@ AWS Management Console
 
 CloudFormation Fields
 
-* Stack name (Enter a name to associate to your AWS VPC deployment)**Next**
+* Stack name (Enter a name to associate to your AWS DynamoDB deployment)**Next**
 * Continue choosing **Next**
 * Click **Create**
 
