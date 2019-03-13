@@ -1,4 +1,5 @@
 # aws-encrypted-dynamodb-cf-template
+[![Build Status](https://travis-ci.org/getcft/aws-encrypted-dynamodb-cf-template.svg?branch=master)](https://travis-ci.org/getcft/aws-encrypted-dynamodb-cf-template)
 
 ## Description:
 
